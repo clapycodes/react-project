@@ -8,11 +8,7 @@ const Task = ({ task, index }) => {
                 <div className='task'
                 ref={provided.innerRef}
                 {...provided.draggableProps}
-                {...provided.dragHandleProps} >
-                    {task.content}
-                    {tasks.map((task, index) => (
-                        <Task key={task.id} task={task} index={index}/>
-                    ))}
+                {...provided.dragHandleProps}>
                 </div>
             )}
         </Draggable>

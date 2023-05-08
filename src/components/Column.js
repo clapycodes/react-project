@@ -15,6 +15,9 @@ const Column = ({ column, tasks }) => {
             >
               {tasks.map(task => <Task key={task.id} task={task} />)}
               {provided.placeholder}
+              {tasks.map((task, index) => (
+                <Task key={task.id} task={task} index={index}/>
+              ))}
             </div>
           )}
         </Droppable>
